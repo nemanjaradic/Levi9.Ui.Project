@@ -10,16 +10,19 @@ namespace Levi9.Ui.Project.Pages
 {
     public class HomePage
     {
-        private static By menuButtonElement = By.Id("react-burger-menu-btn");
-        private static By logOutButtonElement = By.Id("logout_sidebar_link");
-        private static By closeMenuButtonElement = By.Id("react-burger-cross-btn");
-        private static By shoppingCartButtonElement = By.Id("shopping_cart_container");
-        private static By addToCartBackPackElement = By.XPath("//*[@id='add-to-cart-sauce-labs-backpack']");
-        private static By addToCartBikeLightElement = By.XPath("//*[@id='add-to-cart-sauce-labs-bike-light']");
-        private static By addToCartBoltTShirtElement = By.XPath("//*[@id='add-to-cart-sauce-labs-bolt-t-shirt']");
-        private static By addToCartFleeceJacketElement = By.XPath("//*[@id='add-to-cart-sauce-labs-fleece-jacket']");
-        private static By addToCartOnesieShirtElement = By.XPath("//*[@id='add-to-cart-sauce-labs-onesie']");
-        private static By addToCartTestAllTShirtElement = By.Id("add-to-cart-test.allthethings()-t-shirt-(red)");
+        private By menuButtonElement = By.Id("react-burger-menu-btn");
+        private By resetAppStateButtonElement = By.Id("reset_sidebar_link");
+        private By logOutButtonElement = By.Id("logout_sidebar_link");
+        private By closeMenuButtonElement = By.Id("react-burger-cross-btn");
+        private By shoppingCartButtonElement = By.Id("shopping_cart_container");
+        private By shoppingCartBadgeIconElement = By.XPath("//*[@id='shopping_cart_container']/a/span");
+        private By addToCartBackPackElement = By.XPath("//*[@id='add-to-cart-sauce-labs-backpack']");
+        private By addToCartBikeLightElement = By.XPath("//*[@id='add-to-cart-sauce-labs-bike-light']");
+        private By addToCartBoltTShirtElement = By.XPath("//*[@id='add-to-cart-sauce-labs-bolt-t-shirt']");
+        private By addToCartFleeceJacketElement = By.XPath("//*[@id='add-to-cart-sauce-labs-fleece-jacket']");
+        private By addToCartOnesieShirtElement = By.XPath("//*[@id='add-to-cart-sauce-labs-onesie']");
+        private By addToCartTestAllTShirtElement = By.Id("add-to-cart-test.allthethings()-t-shirt-(red)");
+        private By sortDropdownSelectElement = By.ClassName("product_sort_container");
 
         private IWebDriver driver;
 
@@ -34,6 +37,15 @@ namespace Levi9.Ui.Project.Pages
             {
                 WaitHelper.WaitUntilElementIsClickable(driver, menuButtonElement, 5);
                 return driver.FindElement(menuButtonElement);
+            }
+        }
+
+        public IWebElement ResetAppStateButton
+        {
+            get
+            {
+                WaitHelper.WaitUntilElementIsClickable(driver, resetAppStateButtonElement, 5);
+                return driver.FindElement(resetAppStateButtonElement);
             }
         }
 
@@ -61,6 +73,15 @@ namespace Levi9.Ui.Project.Pages
             {
                 WaitHelper.WaitUntilElementIsClickable(driver, shoppingCartButtonElement, 5);
                 return driver.FindElement(shoppingCartButtonElement);
+            }
+        }
+
+        public IWebElement ShoppingCartBadgeIcon
+        {
+            get
+            {
+                WaitHelper.WaitUntilElementIsVisible(driver, shoppingCartBadgeIconElement, 5);
+                return driver.FindElement(shoppingCartBadgeIconElement);
             }
         }
 
@@ -112,6 +133,15 @@ namespace Levi9.Ui.Project.Pages
             {
                 WaitHelper.WaitUntilElementIsVisible(driver, addToCartTestAllTShirtElement, 5);
                 return driver.FindElement(addToCartTestAllTShirtElement);
+            }
+        }
+
+        public IWebElement SortDropdownSelect
+        {
+            get
+            {
+                WaitHelper.WaitUntilElementIsVisible(driver, sortDropdownSelectElement, 5);
+                return driver.FindElement(sortDropdownSelectElement);
             }
         }
     }

@@ -18,7 +18,7 @@ namespace Levi9.Ui.Project.Common
             WebDriverWait driverWait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeOutInSeconds));
             try
             {
-                driverWait.Until(ExpectedConditions.ElementIsVisible(locator));
+                driverWait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(locator));
                 return true;
             }
             catch (WebDriverTimeoutException)
@@ -38,7 +38,7 @@ namespace Levi9.Ui.Project.Common
             WebDriverWait driverWait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeOutInSeconds));
             try
             {
-                driverWait.Until(ExpectedConditions.ElementToBeClickable(locator));
+                driverWait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(locator));
                 return true;
             }
             catch (WebDriverTimeoutException)
@@ -58,7 +58,7 @@ namespace Levi9.Ui.Project.Common
             WebDriverWait driverWait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeOutInSeconds));
             try
             {
-                driverWait.Until(ExpectedConditions.ElementExists(locator));
+                driverWait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(locator));
                 return true;
             }
             catch (WebDriverTimeoutException)
@@ -78,7 +78,7 @@ namespace Levi9.Ui.Project.Common
             WebDriverWait driverWait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeOutInSeconds));
             try
             {
-                driverWait.Until(ExpectedConditions.StalenessOf(element));
+                driverWait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.StalenessOf(element));
                 return true;
             }
             catch (WebDriverTimeoutException)

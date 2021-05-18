@@ -17,7 +17,7 @@ namespace Levi9.Ui.Project.Tests
         private HomePage homePage;
 
         [TestMethod]
-        public void StandardUserIsAbleToLogin()
+        public void StandardUserIsAbleToLoginAndLogOut()
         {
             loginPage = new LoginPage(driver);
             homePage = new HomePage(driver);
@@ -41,7 +41,7 @@ namespace Levi9.Ui.Project.Tests
             homePage = new HomePage(driver);
 
             driver.Navigate().GoToUrl(Constants.baseUrl);
-            loginPage.PerformLogin("FEJL", Constants.password);
+            loginPage.PerformLogin("pogresni password", Constants.password);
 
             Assert.IsTrue(loginPage.ErrorTextMessage.Displayed);
             Assert.AreEqual(loginPage.ErrorTextMessage.Text, "Epic sadface: Username and password do not match any user in this service");
