@@ -2,11 +2,6 @@
 using Levi9.Ui.Project.Pages;
 using Levi9.Ui.Project.Tests.Base;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Levi9.Ui.Project.Tests
 {
