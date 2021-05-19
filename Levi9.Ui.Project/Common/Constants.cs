@@ -22,7 +22,8 @@ namespace Levi9.Ui.Project.Common
         }
 
         public static string baseUrl => GetAppSetting("BaseUrl");
-        public static string username => GetAppSetting("username");
+        public static string standardUser => GetAppSetting("standardUsername");
+        public static string performanceUser => GetAppSetting("performanceUsername");
         public static string password => GetAppSetting("password");
 
         // constants

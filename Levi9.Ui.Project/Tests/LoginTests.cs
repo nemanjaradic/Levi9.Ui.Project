@@ -19,7 +19,7 @@ namespace Levi9.Ui.Project.Tests
 
             driver.Navigate().GoToUrl(Constants.baseUrl);
             //login
-            loginPage.PerformLogin(Constants.username, Constants.password);
+            loginPage.PerformLogin(Constants.standardUser, Constants.password);
             Assert.IsTrue(homePage.ShoppingCartButton.Displayed);
             //logout
             homePage.MenuButton.Click();
