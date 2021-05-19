@@ -123,9 +123,9 @@ namespace Levi9.Ui.Project.Tests
             Assert.AreEqual("3", homePage.ShoppingCartBadgeIcon.Text);
 
             shopingCart.CheckoutOrderButton.Click();
-            shopingCart.FirstNameTexBox.SendKeys("Nemanja");
-            shopingCart.LastNameTexBox.SendKeys("Radic");
-            shopingCart.PostalCodeTexBox.SendKeys("23000");
+            shopingCart.FirstNameTexBox.SendKeys("Code9");
+            shopingCart.LastNameTexBox.SendKeys("testing");
+            shopingCart.PostalCodeTexBox.SendKeys("2021");
 
             shopingCart.ContinueCheckoutButton.Click();
             shopingCart.FinishOrdertButton.Click();

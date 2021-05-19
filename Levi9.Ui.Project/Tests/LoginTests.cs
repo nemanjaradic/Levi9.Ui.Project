@@ -41,5 +41,19 @@ namespace Levi9.Ui.Project.Tests
             Assert.IsTrue(loginPage.ErrorTextMessage.Displayed);
             Assert.AreEqual(loginPage.ErrorTextMessage.Text, "Epic sadface: Username and password do not match any user in this service");
         }
+
+        [TestMethod]
+        public void ThisTestWillFailAndCreateScreenShot()
+        {
+            loginPage = new LoginPage(driver);
+            homePage = new HomePage(driver);
+
+            driver.Navigate().GoToUrl(Constants.baseUrl);
+            loginPage.PerformLogin("pogresni password", Constants.password);
+
+            Assert.IsTrue(homePage.ShoppingCartButton.Displayed);
+            Assert.IsTrue(homePage.AddToCartBackPack.Displayed);
+            Assert.IsTrue(homePage.AddToCartBikeLight.Displayed);
+        }
     }
 }
