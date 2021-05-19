@@ -24,7 +24,7 @@ namespace Levi9.Ui.Project.Tests.Base
 
             options.PageLoadStrategy = PageLoadStrategy.Eager;
             driver = new ChromeDriver(options);
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(5);
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(Constants.baseUrl);
@@ -39,7 +39,6 @@ namespace Levi9.Ui.Project.Tests.Base
                 var dateTime = DateTime.Now.ToFileTimeUtc();
                 screenshot.SaveAsFile($@"C:\Users\n.radic\source\repos\Levi9.Ui.Project\Levi9.Ui.Project\FailedTestsSS\Screenshot{dateTime}.png", ScreenshotImageFormat.Png);
             }
-            driver.Dispose();
             driver.Quit();
         }
     }
