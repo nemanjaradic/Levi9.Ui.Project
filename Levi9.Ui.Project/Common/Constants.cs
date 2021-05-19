@@ -30,7 +30,6 @@ namespace Levi9.Ui.Project.Common
 
         public const int NUMBER_OF_SECONDS_10 = 10;
         public const int NUMBER_OF_SECONDS_5 = 5;
-
         public const string NUMBER_OF_INSERTIONS_1 = "1";
     }
 }
